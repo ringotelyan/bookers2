@@ -17,19 +17,36 @@
 
     <header>
       <% if user_signed_in? %>
+        <%#ここにHomeのリンクが欲しい%>
         <li>
-          <%= link_to 'New Book', new_book_path %>
+          <%= link_to 'Home', root_path %>
         </li>
+        <%#ここにはBooksのリンクが欲しい%>
+        <li>
+          <%= link_to 'Books', books_path %>
+        </li>
+        <%#ここはいる%>
         <li>
           <%= link_to 'Users', user_path(current_user.id) %>
         </li>
+        <%#ここもいる%>
         <li>
           <%= link_to "Log out",destroy_user_session_path, method: :delete %>
         </li>
       <% else %>
+        <%#ここにHomeのリンクが欲しい%>
+        <li>
+          <%= link_to 'Home', root_path %>
+        </li>
+        <%#ここにAboutのリンクが欲しい%>
+        <li>
+          <%= link_to 'About', about_path %>
+        </li>
+        <%#ここはいる%>
         <li>
           <%= link_to "Sign Up", new_user_registration_path %>
         </li>
+        <%#ここもいる%>
         <li>
           <%= link_to "Log in", new_user_session_path %>
         </li>

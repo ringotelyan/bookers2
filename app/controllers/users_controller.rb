@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   def correct_user
     @user = User.find(params[:id])
-    if current_user != user
+    if current_user != @user
       redirect_to root_path
     end
   end
