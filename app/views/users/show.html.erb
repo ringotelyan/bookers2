@@ -15,3 +15,9 @@
   <span><%= link_to book.title, book_path(book.id) %></span>
 </div>
 <% end %>
+
+<% if current_user.id == @user.id %>
+  <div>
+    <%= link_to 'edit', edit_user_path(current_user.id)... %>
+  </div>
+<% end %>
