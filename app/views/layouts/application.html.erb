@@ -17,6 +17,9 @@
 
     <header>
       <% if user_signed_in? %>
+        <li>
+          <%= link_to 'Bookers', root_path %>
+        </li>
         <%#ここにHomeのリンクが欲しい%>
         <li>
           <%= link_to 'Home', root_path %>
@@ -34,6 +37,9 @@
           <%= link_to "Log out",destroy_user_session_path, method: :delete %>
         </li>
       <% else %>
+        <li>
+          <%= link_to 'Bookers', root_path %>
+        </li>
         <%#ここにHomeのリンクが欲しい%>
         <li>
           <%= link_to 'Home', root_path %>
@@ -44,7 +50,7 @@
         </li>
         <%#ここはいる%>
         <li>
-          <%= link_to "Sign Up", new_user_registration_path %>
+          <%= link_to "Sign up", new_user_registration_path %>
         </li>
         <%#ここもいる%>
         <li>
@@ -52,6 +58,7 @@
         </li>
       <% end %>
     </header>
+
 
     <%= yield %>
   </body>
