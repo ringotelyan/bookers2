@@ -8,18 +8,18 @@
       <%= image_tag @book.user.get_profile_image(100,100) %>
     <% end %>
   </p>
-  
+
   <p>
     <%= link_to user_path(@book.user.id) do %>
       <%= @book.user.name %>
     <% end %>
   </p>
-  
+
   <p><%= @book.title %></p>
 
   <p><%= @book.body %></p>
 
-  
+
 
   <% if @book.user == current_user %>
     <%= link_to "edit", edit_book_path(@book.id) %>
