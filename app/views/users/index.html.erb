@@ -36,7 +36,7 @@
 <h1>Users</h1>
 <% @users.each do |user| %>
 <div>
-  <%= image_tag @user.get_profile_image %>
+  <%= image_tag @user.get_profile_image(100,100) %>
   <p><%= image_tag 'no_image.jpg' %></p>
   <p><%= @user.name %></p>
 
