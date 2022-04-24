@@ -23,10 +23,10 @@
 
   <% if @book.user == current_user %>
   <p>
-    <%= link_to "edit", edit_book_path(@book.id) %>
+    <%= link_to "Edit", edit_book_path(@book.id) %>
   </p>
   <p>
-    <%= link_to "destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？" %>
+    <%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？" %>
   </p>
   <% end %>
 
