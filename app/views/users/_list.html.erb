@@ -1,12 +1,23 @@
 <div class="col-md-3">
 
 
-<h1>User info</h1>
-
+<h2>User info</h2>
 <div>
   <%= image_tag user.get_profile_image(100,100) %>
-  <h3>name<%= user.name %></h3>
-  <h3>introduction<%= user.introduction %></h3>
+  <table class="table">
+    <tbody>
+      <tr></tr>
+      <tr>
+        <th>name</th>
+        <th><%= user.name %></th>
+      </tr>
+      <tr>
+        <th>introduction</th>
+        <th><%= user.introduction %></th>
+      </tr>
+    </tbody>
+  </table>
+
 
   <%= link_to edit_user_path(user), class: "btn btn-outline-secondary btn-block edit_user_#{user.id}" do %>
     <i class="fas fa-user-cog"></i>
@@ -14,7 +25,7 @@
 
 </div>
 
-<h1>New book</h1>
+<h2>New book</h2>
 
 <% if book.errors.any? %>
   <%= book.errors.count %>errors prohibited this obj from being saved:
@@ -26,10 +37,10 @@
 <% end %>
 
 <%= form_with model: book do |f| %>
-  <h4>Title</h4>
+  <h6>Title</h6>
   <%= f.text_field :title %>
 
-  <h4>Opinion</h4>
+  <h6>Opinion</h6>
   <%= f.text_area :body %>
 
 
@@ -37,3 +48,4 @@
   <%= f.submit 'Create Book' %>
 <% end %>
 </div>
+
