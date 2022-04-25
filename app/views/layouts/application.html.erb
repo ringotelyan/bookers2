@@ -67,14 +67,18 @@
       </nav>
     </header>
     <main class="mb-auto">
-    <%= yield %>
+      <div class="container">
+        <div class="row">
+          <%= yield %>
+        </div>
+      </div>
     </main>
     <footer class="bg-dark text-white pt-5 pb-4">
       <div class="container">
         <div class="row no-gutters">
           <div class="col-md-4">
             <p>CopyRight Infratop.inc</p>
-            <%= image_tag('logo-white.png') %>
+            <%#= image_tag('logo-white.png') %>
           </div>
 
         </div>
