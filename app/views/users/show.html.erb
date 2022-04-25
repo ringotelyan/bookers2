@@ -1,7 +1,8 @@
-
+<div class="container">
+<div class="row">
     <%= render 'list', user: @user, book: @book %>
 
-    <div class="col-md-9">
+    <div class="col-md-8 offset-md-1">
       <h1>Books</h1>
       <% @books.each do |book| %>
         <div>
@@ -23,3 +24,5 @@
 
 
     <% end %>
+</div>
+</div>
