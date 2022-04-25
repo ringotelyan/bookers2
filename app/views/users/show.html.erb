@@ -8,7 +8,11 @@
       <%= image_tag book.user.get_profile_image(100,100) %>
     <% end %>
 
-    <p><%= book.title %></p>
+    <p>
+      <%= link_to book_path(book.id) do %>
+        <%= book.title %>
+      <% end %>
+    </p>
     <p>Opinion<%= book.body %></p>
     <p><%= book.user.name %></p>
 
